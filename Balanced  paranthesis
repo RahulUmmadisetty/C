@@ -1,0 +1,20 @@
+//Balanced paranthesis
+#include<stdio.h>
+int main()
+{
+    char a[100];
+    int op=0,cp=0,i;
+    scanf("%s",a);
+    for(i=0;a[i]!='\0';i++)
+    {
+        if(op==0 && a[i]==')')
+        {
+        op=-1;
+        break;
+        }
+        else if(a[i]=='(') op++;
+        else op--;
+    }
+    if(op==0) printf("Yes");
+    else printf("no");
+}
